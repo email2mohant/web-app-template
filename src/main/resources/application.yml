@@ -1,9 +1,13 @@
+spring:
+  app:
+    name: mohan
+
 info:
   app:
-    name: "Hello World App"
-    version: 1.0
-  server:
-    port: 9000
+    name: ${spring.application.name}
+    description: Very cool Spring Boot application
+    version: '1.0'
+
 
 # Actuator Properties
 # Check the list of endpoints available here:
@@ -12,12 +16,22 @@ info:
 management:
   server:
     port: 9001
+  info:
+    env:
+      enabled: true
   endpoint:
     health:
       show-details: "always"
   endpoints:
+    # Disable all JMX endpoints.
+    jmx:
+      exposure:
+        exclude: "*"
     web:
-      base-path: "/manage"
+      base-path: "/management"
+      cors:
+        allowed-origins: "https://example.com"
+        allowed-methods: "GET"
       exposure:
         include: "*"
         exclude: "beans"

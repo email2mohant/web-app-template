@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FunRestController {
 
-    @Value("${info.app.name}")
+    @Value("${spring.app.name}")
     private String appName;
 
     @GetMapping("/")
