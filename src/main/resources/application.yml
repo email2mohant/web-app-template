@@ -1,0 +1,25 @@
+info:
+  app:
+    name: "Hello World App"
+    version: 1.0
+  server:
+    port: 9000
+
+# Actuator Properties
+# Check the list of endpoints available here:
+# https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.enabling
+
+management:
+  server:
+    port: 9001
+  endpoint:
+    health:
+      show-details: "always"
+  endpoints:
+    web:
+      base-path: "/manage"
+      exposure:
+        include: "*"
+        exclude: "beans"
+
+
