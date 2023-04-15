@@ -3,10 +3,6 @@
 # https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
 
 spring:
-  app:
-    name: mohan
-  main:
-    lazy-initialization: true
   security:
     user:
       name: admin
@@ -21,7 +17,7 @@ server:
 
 info:
   app:
-    name: ${spring.application.name}
+    name: HelloWorld-App
     description: Very cool Spring Boot application
     version: '1.0'
 
@@ -56,8 +52,6 @@ management:
         exclude: "beans"
 
 logging:
-  file:
-
   level:
     org.springframework: INFO
 

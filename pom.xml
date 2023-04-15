@@ -14,6 +14,7 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<main.class>com.nobrainer.springboot.demo.helloworldapp.HelloWorldApplication</main.class>
+		<args4j.version>2.33</args4j.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -38,6 +39,10 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>args4j</groupId>
+			<artifactId>args4j</artifactId>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -48,6 +53,11 @@
 				<version>${spring.boot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>args4j</groupId>
+				<artifactId>args4j</artifactId>
+				<version>${args4j.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
