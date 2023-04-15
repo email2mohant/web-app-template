@@ -5,6 +5,8 @@
 spring:
   app:
     name: mohan
+  main:
+    lazy-initialization: true
   security:
     user:
       name: admin
