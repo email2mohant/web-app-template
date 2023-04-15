@@ -1,0 +1,63 @@
+
+# Refer the docs for all props:
+# https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+
+spring:
+  app:
+    name: mohan
+  security:
+    user:
+      name: admin
+      password: admin
+
+server:
+  port: 9000
+  servlet:
+    context-path: "/app"
+    session:
+      timeout: "30m"
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: Very cool Spring Boot application
+    version: '1.0'
+
+
+# Actuator Properties
+# Check the list of endpoints available here:
+# https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.enabling
+
+management:
+  server:
+    port: 9001
+  info:
+    env:
+      enabled: true
+  endpoint:
+    health:
+      show-details: "when-authorized"
+
+  endpoints:
+    # Disable all JMX endpoints.
+    jmx:
+      exposure:
+        exclude: "*"
+    web:
+      base-path: "/management"
+      cors:
+        allowed-origins: "https://example.com"
+        allowed-methods: "GET"
+      exposure:
+        # Use wildcard '*" to expose all endpoints
+        include: "info, health, mappings"
+        exclude: "beans"
+
+logging:
+  file:
+
+  level:
+    org.springframework: INFO
+
+
+
