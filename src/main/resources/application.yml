@@ -1,6 +1,11 @@
 spring:
   app:
     name: mohan
+  security:
+    user:
+      name: admin
+      password: admin
+
 
 info:
   app:
@@ -21,7 +26,8 @@ management:
       enabled: true
   endpoint:
     health:
-      show-details: "always"
+      show-details: "when-authorized"
+
   endpoints:
     # Disable all JMX endpoints.
     jmx:
@@ -33,7 +39,8 @@ management:
         allowed-origins: "https://example.com"
         allowed-methods: "GET"
       exposure:
-        include: "*"
+        # Use wildcard '*" to expose all endpoints
+        include: "info, health, mappings"
         exclude: "beans"
 
 
