@@ -128,9 +128,9 @@
                                 <requireMavenVersion>
                                     <version>3.8.1</version>
                                 </requireMavenVersion>
-                                <requireJavaVersion>
+<!--                                 <requireJavaVersion>
                                     <version>18</version>
-                                </requireJavaVersion>
+                                </requireJavaVersion> -->
                                 <requireOS>
                                     <family>unix</family>
                                 </requireOS>
