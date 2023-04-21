@@ -11,8 +11,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.version>3.0.5</spring.boot.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <main.class>com.nobrainer.springboot.demo.helloworldapp.HelloWorldApplication</main.class>
         <args4j.version>2.33</args4j.version>
         <mysql-driver.version>8.0.26</mysql-driver.version>
