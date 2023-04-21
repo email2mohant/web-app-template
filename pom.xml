@@ -129,7 +129,7 @@
                                     <version>3.8.1</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <version>18</version>
+                                    <version>17</version>
                                 </requireJavaVersion>
                                 <requireOS>
                                     <family>unix</family>
